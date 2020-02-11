@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Composer example</title>
+    <link rel="stylesheet" href="http://localhost/blog/node_modules/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body>
+    
+        {{ include ('navbar.html.twig') }}
+
+        <div class="container mt-2">
+            {% block body %}{% endblock %}
+        </div>
+        
+        <footer class="page-footer font-small blue mt-5">
+            <div class="footer-copyright text-center py-3">
+                © 2020 Copyright: Sayil
+            </div>
+        </footer>
+
+        <script src="http://localhost/blog/node_modules/jquery/dist/jquery.js"></script>
+        <script src="http://localhost/blog/node_modules/popper.js/dist/umd/popper.js"></script>
+        <script src="http://localhost/blog/node_modules/bootstrap/dist/js/bootstrap.js"></script>
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>

@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+<div class="card">
+  <img class="card-img-top"  src="http://placehold.it/750x300" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">{{entries.title}}</h5>
+    <p class="card-text">{{entries.content}}</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Writen by: {{entries.user.user}}</li>
+    <li class="list-group-item">Creation day: {{entries.created_at}}</li>
+    <li class="list-group-item">Comments:
+    {% for comments in entries.comment|slice(0, 2) %}
+        <p>User {{comments.user.user}} said:<p>
+        <p>{{comments.content}}</p>
+    {% else %}
+        <p>Comments not found!</p>
+    {% endfor %}
+    </li>
+  </ul>
+  <div class="card-body">
+    <a href="http://localhost/blog/index.php" class="card-link">Go back</a>
+    {% if session is defined %}
+    <a href="#" class="card-link">Add comment</a>
+        {% if session == entries.user.user %}
+        <a href="#" class="card-link align-items-end">Modify article</a>
+        {% endif %}
+    {% endif %}
+    <a href="#" class="card-link">See all comments</a>
+  </div>
+</div>
+{% endblock %}

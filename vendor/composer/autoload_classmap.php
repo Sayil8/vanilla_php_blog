@@ -11,11 +11,13 @@ return array(
     'Controllers\\Comments' => $baseDir . '/controllers/comments.php',
     'Controllers\\Entrys' => $baseDir . '/controllers/entrys.php',
     'Controllers\\Users' => $baseDir . '/controllers/users.php',
+    'Create' => $baseDir . '/controllers/create.php',
     'Err' => $baseDir . '/controllers/err.php',
     'Login' => $baseDir . '/controllers/login.php',
     'Main' => $baseDir . '/controllers/main.php',
     'Models\\Comment' => $baseDir . '/models/Comment.php',
     'Models\\Entry' => $baseDir . '/models/Entry.php',
     'Models\\User' => $baseDir . '/models/User.php',
+    'Single' => $baseDir . '/controllers/single.php',
     'View' => $baseDir . '/lib/view.php',
 );

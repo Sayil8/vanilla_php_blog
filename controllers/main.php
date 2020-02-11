@@ -24,8 +24,9 @@ class Main extends Controller{
       
       //$com = Comments::create_comment("1","1","like");
 
-          $this->view->render('index.php.twig', $entries);
-  
+      $this->view->render('index.php.twig', $entries);
+
+
   
           }
     }

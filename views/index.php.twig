@@ -29,6 +29,21 @@
     </div>
     {% endfor %}
   </div>
+
+  <div class="col-md-3">
+      <form class="form-inline" method="post" action="http://localhost/blog/search">
+          <label>
+          <h3>Search Articles</h3>
+          </label>
+        <div class="form-group mb-2">
+          <label for="search" class="sr-only">Search</label>
+          <input type="text" class="form-control" name="search" placeholder="Keyword">
+        </div>
+        <button type="submit" class="btn btn-info">Find</button>
+      </form>
+  </div>
+
+
 </div>
 </div>
 {% endblock %}
